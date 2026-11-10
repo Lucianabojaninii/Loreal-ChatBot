@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smart Beauty Advisor</title>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&family=Playfair+Display:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="page-wrapper">
+      <!------- Header / Branding ------->
+      <header class="site-header">
+        <img src="img/loreal-logo.png" alt="L'Oréal logo" class="site-logo" />
+        <h1 class="site-title">Smart Beauty Advisor</h1>
+        <p class="tagline">Because you're worth it.</p>
+      </header>
+
+      <!------- Chat Area ------->
+      <main>
+        <section class="chatbox">
+          <div id="latestQuestion" class="latest-question" hidden>
+            <strong>Your question:</strong>
+            <span id="latestQuestionText"></span>
+          </div>
+
+          <div id="chatWindow" class="chat-window">
+            <!-- messages will be appended here via JS -->
+          </div>
+
+          <div id="suggestionChips" class="suggestion-chips">
+            <button type="button" class="suggestion-chip" data-question="Build my skincare routine">
+              ✨ Build my skincare routine
+            </button>
+            <button type="button" class="suggestion-chip" data-question="Find my foundation">
+              💄 Find my foundation
+            </button>
+            <button type="button" class="suggestion-chip" data-question="Fix frizzy hair">
+              💇‍♀️ Fix frizzy hair
+            </button>
+            <button type="button" class="suggestion-chip" data-question="Recommend a fragrance">
+              🌸 Recommend a fragrance
+            </button>
+          </div>
+
+          <form id="chatForm" class="chat-form">
+            <label for="userInput" class="visually-hidden">Message</label>
+            <input
+              id="userInput"
+              name="userInput"
+              type="text"
+              placeholder="Ask me about products or routines…"
+              autocomplete="off"
+              required
+            />
+            <button type="submit" id="sendBtn">
+              <span class="material-icons">send</span>
+              <span class="visually-hidden">Send</span>
+            </button>
+          </form>
+        </section>
+      </main>
+
+      <!------- Footer Links ------->
+      <footer class="site-footer">
+        <p>&copy; 2026 L'Oréal. All rights reserved.</p>
+        <nav>
+          <a href="https://www.loreal.com/en/privacy-policy/privacy-policy-links/">Privacy Policy</a>
+          <a href="https://www.loreal.com/en/groupe/global-terms-of-use/">Terms of Use</a>
+          <a href="https://www.loreal.com/en/usa/articles/contact-us/">Contact</a>
+        </nav>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
